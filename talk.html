@@ -1,0 +1,10 @@
+<ul>
+  {% for m in history %}
+  <li>{{m['name']}}:{{m['mesg']}} ({{m['time']}}) ({{m['ip']}})</li>
+  {% end %}
+</ul>
+<form action='/talk' method='post'>
+  Name: <input name='name' readonly value='{{name}}'>
+  Message: <input name='mesg'>
+  <input type='submit'>
+</form>
